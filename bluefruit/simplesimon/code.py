@@ -14,8 +14,8 @@ from adafruit_circuitplayground.bluefruit import cpb
 
 FAILURE_TONE = 100
 SEQUENCE_DELAY = 0.8
-GUESS_TIMEOUT = 3.0
-DEBOUNCE = 0.250
+GUESS_TIMEOUT = 5.0
+DEBOUNCE = 0.5
 SEQUENCE_LENGTH = {1: 8, 2: 14, 3: 20, 4: 31}
 SIMON_BUTTONS = {
     1: {"pads": (4, 5), "pixels": (0, 1, 2), "color": 0x00FF00, "freq": 415},
@@ -152,7 +152,7 @@ def game_won():
 
 
 # Initialize setup
-cpb.pixels.brightness = 0.1
+cpb.pixels.brightness = 0.05
 cpb.pixels.fill(0)
 cpb.pixels[0] = 0xFFFFFF
 skill_level = choose_skill_level()
